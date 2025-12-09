@@ -1,1 +1,1 @@
-
+There are two sets of results here. The simpler baseline uses only night-light intensity as the input and already picks up a weak positive relationship with local GDP. The main model, which is the one described in the poster, uses CNN features extracted from Sentinel-2 patches and does a better job at explaining the variation in GDP, although the relationship is still fairly noisy.

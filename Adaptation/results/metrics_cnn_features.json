@@ -1,0 +1,7 @@
+{
+  "r2": 0.3293860820109932,
+  "mae": 3008.5191763648644,
+  "n_train": 800,
+  "n_test": 200,
+  "model": "Ridge regression on CNN features"
+}

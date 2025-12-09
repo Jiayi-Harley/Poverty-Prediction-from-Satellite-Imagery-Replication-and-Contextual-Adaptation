@@ -2,6 +2,7 @@ This part of the repository contains the Sichuan adaptation. The goal here is si
 
 The workflow in this folder follows a simple structure: one notebook prepares the Sichuan data by sampling points across the province and matching each point with its GDP value and night-light value, and another notebook trains a small regression model to see how well the night-light signal explains the variation in GDP. The idea is not to build a perfect model but to check whether the core relationship described in the original paper still holds. The results suggest that it does: brighter places generally correspond to higher local GDP, although the strength of the pattern is smaller than in the DHS setting.
 
-![Scatter plot of GDP vs NTL](results/gdp_vs_ntl_scatter.png)
-
 The data folders here only include small files generated during the process (such as sample_points.csv). The larger datasets (GDP raster, shapefile) are not uploaded to GitHub, but the sources and download links are listed below so the workflow can be reproduced.
+
+![Scatter plot of GDP vs NTL](results/gdp_vs_ntl_scatter.png)
+This plot is just a quick check to see whether the night-light signal has any relationship with the GDP values we sampled across Sichuan. The points are fairly spread out, but there’s a general upward tendency: brighter locations usually match with higher local GDP. It’s not a tight pattern, which is expected given the noise in both datasets, but it’s enough to show that the basic idea still holds here and that the night-light intensity does carry some information about local economic conditions.

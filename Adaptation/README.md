@@ -5,4 +5,5 @@ The workflow in this folder follows a simple structure: one notebook prepares th
 The data folders here only include small files generated during the process (such as sample_points.csv). The larger datasets (GDP raster, shapefile) are not uploaded to GitHub, but the sources and download links are listed below so the workflow can be reproduced.
 
 ![Scatter plot of GDP vs NTL](results/gdp_vs_ntl_scatter.png)
+
 This plot is just a quick check to see whether the night-light signal has any relationship with the GDP values we sampled across Sichuan. The points are fairly spread out, but there’s a general upward tendency: brighter locations usually match with higher local GDP. It’s not a tight pattern, which is expected given the noise in both datasets, but it’s enough to show that the basic idea still holds here and that the night-light intensity does carry some information about local economic conditions.

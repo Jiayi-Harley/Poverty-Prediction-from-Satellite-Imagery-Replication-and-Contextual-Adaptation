@@ -1,1 +1,1 @@
-
+The Sichuan boundary shapefile was obtained from the GADM website (https://gadm.org). Download the China shapefile, extract the folder, and keep only the Sichuan polygon. The notebooks expect the file sichuan_province.shp to be placed here.

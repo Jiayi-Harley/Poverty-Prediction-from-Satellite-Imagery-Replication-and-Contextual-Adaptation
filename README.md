@@ -6,7 +6,7 @@ Replicate the original AI method using the open dataset, achieving results withi
 
 Adapt the same methodology to a new geographical context (Sichuan, China) to address SDG 1 – No Poverty.
 
-## About the Data
+## About the Data for the baseline replication
 
 1. The way of retrieving data that the author said is out of work, since the data has been archived and the google drive is out of use. Here's what we can still do: Download nightlights data from https://www.ngdc.noaa.gov/eog/viirs/download_dnb_composites.html. Use the 2015 annual composite in the 75N/060W tile and the 00N/060W tile. Choose the .tif file that has "vcm-orm-ntl" in the name. Save them to viirs_2015_<tile_descriptor>.tif, where tile_descriptor is 75N/060W or 00N/060W.
   
@@ -17,7 +17,8 @@ Once the data is in place, the replication mostly follows the structure of the o
 
 ## Adapting to the Sichuan China Data
 
-For the Sichuan part, I needed something that could stand in for the DHS wealth index, since we obviously don’t have that kind of survey data for China. The 1-km GDP raster from Figshare turned out to be a good fit, because it gives a fairly detailed view of local economic activity and can be treated as a rough indicator of development levels. I clipped it to the Sichuan boundary from GADM so I could focus on the province. To keep the idea close to Jean et al. (2016), I still used nighttime lights as the main signal, pulling the annual VIIRS values for points across Sichuan. Once I had GDP and night-light matched for a large set of locations, the question was simply whether the same kind of relationship the original paper relies on also appears here. The final results suggested that it does: brighter areas generally show higher local GDP, and even a simple model can capture that pattern. It’s not a perfect setup, but it’s enough to show that the original approach transfers reasonably well to this new context.
+For the Sichuan part, I needed something that could stand in for the DHS wealth index, since we obviously don’t have that kind of survey data for China. The 1-km GDP raster from Figshare turned out to be a good fit, because it gives a fairly detailed view of local economic activity and can be treated as a rough indicator of development levels. I clipped it to the Sichuan boundary from GADM so I could focus on the province. To keep the idea close to Jean et al. (2016), I still used nighttime lights as one of the main signals, pulling the annual VIIRS values for points across Sichuan, and I also reused the CNN from the replication to extract visual features from Sentinel-2 patches around those locations. Once I had GDP, night-light, and CNN features matched for a set of sampled points, the question was simply whether the same kind of relationship the original paper relies on also appears here. The final results suggested that it does: brighter areas and patches with more “developed-looking” features generally show higher local GDP, and even fairly simple regression models can capture that pattern. It’s not a perfect setup, but it’s enough to show that the original approach transfers reasonably well to this new context.
+
 
 ## Repository structure
 
